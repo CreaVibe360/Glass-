@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: glasslan-api
+    runtime: docker
+    plan: free
+    healthCheckPath: /health
+    envVars:
+      - key: ALLOWED_ORIGIN
+        value: "*"
+      - key: DATA_DIR
+        value: /app/storage
